@@ -118,18 +118,33 @@ document.addEventListener("DOMContentLoaded", () => {
     if (drawerTitle) drawerTitle.textContent = name;
     if (drawerStack) drawerStack.textContent = role;
     if (drawerArchitecture) {
-      drawerArchitecture.textContent = card.dataset.architecture || `${name}: Engineered with ${role}. Modular architecture, production-ready schema validation, and verified unit and integration test coverage.`;
+      if (card.dataset.architecture) {
+        drawerArchitecture.innerHTML = card.dataset.architecture;
+      } else {
+        drawerArchitecture.textContent = `${name}: Engineered with ${role}. Modular architecture, production-ready schema validation, and verified unit and integration test coverage.`;
+      }
     }
     if (drawerImpact) {
-      drawerImpact.textContent = desc;
-    }
-    if (drawerLink) {
-      drawerLink.setAttribute("href", href);
-      drawerLink.textContent = linkText;
-      if (href === "#") {
-        drawerLink.style.display = "none";
+      if (card.dataset.impact) {
+        drawerImpact.innerHTML = card.dataset.impact;
       } else {
-        drawerLink.style.display = "inline-flex";
+        drawerImpact.textContent = desc;
+      }
+    }
+    const drawerCtaContainer = drawer.querySelector(".drawer__cta");
+    if (card.dataset.extraCta && drawerCtaContainer) {
+      drawerCtaContainer.innerHTML = card.dataset.extraCta;
+      drawerCtaContainer.style.display = "flex";
+      drawerCtaContainer.style.gap = "12px";
+      drawerCtaContainer.style.flexWrap = "wrap";
+    } else if (drawerCtaContainer) {
+      drawerCtaContainer.innerHTML = `<a class="pill pill--lime pill--big" id="drawerLink" href="${href}" target="_blank" rel="noopener">${linkText}</a>`;
+      drawerCtaContainer.style.display = "flex";
+      drawerCtaContainer.style.gap = "12px";
+      drawerCtaContainer.style.flexWrap = "wrap";
+      const link = drawerCtaContainer.querySelector("#drawerLink");
+      if (href === "#") {
+        link.style.display = "none";
       }
     }
 
