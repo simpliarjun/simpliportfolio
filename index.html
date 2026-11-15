@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-impeccable-ignore="cream-palette,marquee,hard-offset-shadow">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARJUN GUPTA® · Full-Stack Engineer, AI Builder &amp; Growth Strategist</title>
   <meta name="description" content="1:1 Montgomery replica portfolio for Arjun Gupta: Full-stack engineer, AI systems builder, Smart India Hackathon winner, and founder.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
@@ -43,13 +45,18 @@
       <a href="#work">Work</a>
       <a href="#process">Process</a>
     </nav>
-    <a class="pill pill--lime" href="#contact">
-      Say hello
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <a class="pill pill--ghost" href="public/Arjun-Gupta-Resume-2026.pdf" download="Arjun-Gupta-Resume-2026.pdf" style="padding: 10px 18px; font-size: 11px;">
+        CV ↓
+      </a>
+      <a class="pill pill--lime" id="sayHelloBtn" href="#contact">
+        Say hello
       <svg class="arr-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M18 8L22 12L18 16"></path>
         <path d="M2 12H22"></path>
       </svg>
     </a>
+      </div>
   </header>
 
   <main id="top">
@@ -86,6 +93,9 @@
             <path d="M18 8L22 12L18 16"></path>
             <path d="M2 12H22"></path>
           </svg>
+        </a>
+        <a class="pill pill--ghost pill--big" href="public/Arjun-Gupta-Resume-2026.pdf" download="Arjun-Gupta-Resume-2026.pdf">
+          Download CV ↓
         </a>
         <a class="pill pill--ghost pill--big" href="#impact">
           Experience &amp; impact
@@ -282,13 +292,13 @@
           <span class="section-head__idx">(02)</span>
           <h2 class="section-head__title">Complete Work Archive</h2>
         </div>
-        <span class="section-head__note">// 22 shipped projects · 100% audited</span>
+        <span class="section-head__note">// 23 shipped projects · 100% audited</span>
       </div>
 
       <!-- Controls: Category Filters & View Toggle -->
       <div class="projects__controls">
         <div class="projects__filters">
-          <button class="filter-btn is-active" data-filter="all">ALL [22]</button>
+          <button class="filter-btn is-active" data-filter="all">ALL [23]</button>
           <button class="filter-btn" data-filter="fullstack">FULLSTACK [11]</button>
           <button class="filter-btn" data-filter="ai">AI &amp; PYTHON [6]</button>
           <button class="filter-btn" data-filter="mobile">MOBILE &amp; IOT [4]</button>
@@ -633,6 +643,22 @@
           </div>
         </article>
 
+        <!-- №23: StratOps (Gold) -->
+        <article class="proj proj--gold" data-category="mobile fullstack"
+          data-architecture="Node.js daemon paired with client-side real-time graphing, WebSockets heartbeat polling, and failover routing across distributed environmental data collectors.">
+          <div class="proj__top">
+            <span class="proj__idx">№23 · 2024</span>
+            <a class="proj__link" href="https://github.com/simpliarjun/stratops" target="_blank" rel="noopener">GITHUB ↗</a>
+          </div>
+          <div class="proj__main">
+            <h3 class="proj__name">STRATOPS</h3>
+            <p class="proj__desc">High-altitude distributed operations platform orchestrating real-time sensor node telemetry with automated heartbeat reconciliation and live dashboard streaming.</p>
+          </div>
+          <div class="proj__bottom">
+            <span class="proj__role">JavaScript · Distributed Nodes · Telemetry Engine</span>
+          </div>
+        </article>
+
       </div>
 
       <!-- Navigation: Dots & Arrow Buttons -->
@@ -680,6 +706,33 @@
     </section>
 
   </main>
+  <!-- ═══ SLIDE-OVER PROJECT DOSSIER DRAWER ═══ -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="projectDrawer" aria-hidden="true" role="dialog" aria-labelledby="drawerTitle">
+    <div class="drawer__header">
+      <div class="drawer__badge" id="drawerBadge">№01 · FULLSTACK</div>
+      <button class="drawer__close" id="drawerCloseBtn" aria-label="Close Project Dossier">✕</button>
+    </div>
+    <div class="drawer__body">
+      <h2 class="drawer__title" id="drawerTitle">PROJECT TITLE</h2>
+      <div class="drawer__stack" id="drawerStack">STACK TAGS</div>
+      <div class="drawer__divider"></div>
+      <div class="drawer__section">
+        <h3>// System Architecture &amp; Engineering</h3>
+        <p id="drawerArchitecture">Architecture details loaded here...</p>
+      </div>
+      <div class="drawer__section">
+        <h3>// Production Impact &amp; Role</h3>
+        <p id="drawerImpact">Impact details loaded here...</p>
+      </div>
+      <div class="drawer__cta">
+        <a class="pill pill--lime pill--big" id="drawerLink" href="#" target="_blank" rel="noopener">
+          View Repository ↗
+        </a>
+      </div>
+    </div>
+  </aside>
+
 
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer" id="contact">
@@ -698,6 +751,8 @@
       <span>© 2026 GUPTA®</span>
     </div>
   </footer>
+
+  <div id="emailToast" class="toast" role="status" aria-live="polite">// EMAIL COPIED TO CLIPBOARD ✓</div>
 
   <script src="main.js"></script>
 </body>

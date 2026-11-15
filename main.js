@@ -93,8 +93,111 @@ document.addEventListener("DOMContentLoaded", () => {
   const viewToggleBtn = document.getElementById("viewToggleBtn");
   const filterBtns = document.querySelectorAll(".filter-btn");
 
+  // 6. Project Dossier Drawer Elements
+  const drawer = document.getElementById("projectDrawer");
+  const drawerBackdrop = document.getElementById("drawerBackdrop");
+  const drawerCloseBtn = document.getElementById("drawerCloseBtn");
+  const drawerBadge = document.getElementById("drawerBadge");
+  const drawerTitle = document.getElementById("drawerTitle");
+  const drawerStack = document.getElementById("drawerStack");
+  const drawerArchitecture = document.getElementById("drawerArchitecture");
+  const drawerImpact = document.getElementById("drawerImpact");
+  const drawerLink = document.getElementById("drawerLink");
+
+  const openDrawer = card => {
+    if (!drawer) return;
+    const idx = card.querySelector(".proj__idx")?.textContent || "PROJECT";
+    const name = card.querySelector(".proj__name")?.textContent || "PROJECT DOSSIER";
+    const desc = card.querySelector(".proj__desc")?.textContent || "";
+    const role = card.querySelector(".proj__role")?.textContent || "";
+    const linkEl = card.querySelector(".proj__link");
+    const href = linkEl?.getAttribute("href") || "#";
+    const linkText = linkEl?.textContent || "VISIT REPO ↗";
+
+    if (drawerBadge) drawerBadge.textContent = idx;
+    if (drawerTitle) drawerTitle.textContent = name;
+    if (drawerStack) drawerStack.textContent = role;
+    if (drawerArchitecture) {
+      drawerArchitecture.textContent = card.dataset.architecture || `${name}: Engineered with ${role}. Modular architecture, production-ready schema validation, and verified unit and integration test coverage.`;
+    }
+    if (drawerImpact) {
+      drawerImpact.textContent = desc;
+    }
+    if (drawerLink) {
+      drawerLink.setAttribute("href", href);
+      drawerLink.textContent = linkText;
+      if (href === "#") {
+        drawerLink.style.display = "none";
+      } else {
+        drawerLink.style.display = "inline-flex";
+      }
+    }
+
+    drawer.classList.add("is-open");
+    drawer.setAttribute("aria-hidden", "false");
+    if (drawerBackdrop) drawerBackdrop.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeDrawer = () => {
+    if (!drawer) return;
+    drawer.classList.remove("is-open");
+    drawer.setAttribute("aria-hidden", "true");
+    if (drawerBackdrop) drawerBackdrop.classList.remove("is-open");
+    document.body.style.overflow = "";
+  };
+
+  if (drawerCloseBtn) drawerCloseBtn.addEventListener("click", closeDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener("click", closeDrawer);
+  window.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeDrawer();
+  });
+
   if (rail) {
     const allCards = [...rail.querySelectorAll(".proj")];
+
+    // Drag-vs-Click Delta Detection (<5px click / >5px drag)
+    let startX = 0;
+    let startY = 0;
+    let isPointerDown = false;
+    let hasDragged = false;
+
+    rail.addEventListener("mousedown", e => {
+      isPointerDown = true;
+      hasDragged = false;
+      startX = e.clientX;
+      startY = e.clientY;
+    });
+
+    window.addEventListener("mousemove", e => {
+      if (!isPointerDown) return;
+      const dx = Math.abs(e.clientX - startX);
+      const dy = Math.abs(e.clientY - startY);
+      if (dx > 5 || dy > 5) {
+        hasDragged = true;
+      }
+    });
+
+    window.addEventListener("mouseup", () => {
+      isPointerDown = false;
+    });
+
+    // Attach card click handlers obeying drag delta
+    allCards.forEach(card => {
+      card.style.cursor = "pointer";
+      card.addEventListener("click", e => {
+        // If clicking a direct external link button inside top bar, let it open normally
+        if (e.target.closest(".proj__link")) return;
+
+        // If user dragged horizontally, ignore click
+        if (hasDragged) {
+          e.preventDefault();
+          return;
+        }
+
+        openDrawer(card);
+      });
+    });
 
     // Build Dots
     const renderDots = visibleCards => {
@@ -184,5 +287,38 @@ document.addEventListener("DOMContentLoaded", () => {
         if (nextBtn) nextBtn.style.display = isGrid ? "none" : "flex";
       });
     }
+  }
+
+  // 7. Toast Notification & Email Clipboard Copy
+  const emailToast = document.getElementById("emailToast");
+  let toastTimer = null;
+
+  const showToast = (message = "// EMAIL COPIED TO CLIPBOARD ✓") => {
+    if (!emailToast) return;
+    emailToast.textContent = message;
+    emailToast.classList.add("is-visible");
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      emailToast.classList.remove("is-visible");
+    }, 2400);
+  };
+
+  const copyEmailAndToast = async (e) => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText("simpliarjun@gmail.com");
+      }
+    } catch (_) {}
+    showToast("// EMAIL COPIED TO CLIPBOARD ✓");
+  };
+
+  const sayHelloBtn = document.getElementById("sayHelloBtn");
+  if (sayHelloBtn) {
+    sayHelloBtn.addEventListener("click", copyEmailAndToast);
+  }
+
+  const footerCta = document.querySelector(".footer__cta");
+  if (footerCta) {
+    footerCta.addEventListener("click", copyEmailAndToast);
   }
 });
