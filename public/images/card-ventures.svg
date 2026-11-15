@@ -14,35 +14,33 @@
   <circle cx="80" cy="35" r="5" fill="#86F074"/>
   <text x="102" y="39" fill="#F7F3EB" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1.2">GOVT &amp; GROWTH EXECUTION // NIC-MHA // DIGIDIR</text>
 
-  <!-- Top Row: 2 Structured Boxes -->
-  <!-- Box 1: Ministry of Home Affairs -->
+  <!-- Top Row: 2 Compact Structured Boxes -->
+  <!-- Box 1: NIC · MHA Portal -->
   <rect x="24" y="62" width="274" height="134" rx="10" fill="#1C211A" stroke="#F5C927" stroke-width="1.5"/>
   <rect x="36" y="74" width="106" height="20" rx="4" fill="#F5C927"/>
   <text x="42" y="88" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">NATIONAL SCALE</text>
-  <text x="36" y="116" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="18" letter-spacing="0.3">MINISTRY OF HOME AFFAIRS</text>
-  <text x="36" y="136" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11">NIC Intern · National Awards Portal</text>
-  <text x="36" y="158" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10">Accessible interfaces for national audience</text>
-  <text x="36" y="176" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">Backend data logic &amp; policy workflows</text>
+  <text x="36" y="118" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="17" letter-spacing="0.3">NIC · MHA PORTAL</text>
+  <text x="36" y="144" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11.5">National Awards Portal · NIC</text>
+  <text x="36" y="168" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10.5">Accessible Scale · Govt. of India</text>
 
-  <!-- Box 2: DiGiDiR & State Platforms -->
+  <!-- Box 2: DiGiDiR SEO Growth -->
   <rect x="322" y="62" width="274" height="134" rx="10" fill="#1C211A" stroke="#C8E620" stroke-width="1.5"/>
   <rect x="334" y="74" width="124" height="20" rx="4" fill="#C8E620"/>
   <text x="340" y="88" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">+45% IMPRESSIONS</text>
-  <text x="334" y="116" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="18" letter-spacing="0.3">DIGIDIR &amp; STATE PLATFORMS</text>
-  <text x="334" y="136" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">8 Client Accounts Scaled to Top-10</text>
-  <text x="334" y="158" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10">Python, GA4, SEMrush, GSC &amp; Ahrefs</text>
-  <text x="334" y="176" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="10">Kerala NATPAC (13 KPIs) · Sikkim SAJO</text>
+  <text x="334" y="118" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="17" letter-spacing="0.3">DIGIDIR SEO GROWTH</text>
+  <text x="334" y="144" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11.5">8 Client Accounts Scaled</text>
+  <text x="334" y="168" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10.5">Python, GA4, SEMrush &amp; GSC</text>
 
   <!-- Bottom Panel: 2-Part Layout with Zero Overlap -->
   <rect x="24" y="208" width="572" height="174" rx="10" fill="#181D15" stroke="#262B22" stroke-width="1.2"/>
   
   <!-- Left Side: CV Verified Fact Bullets (Width 400px) -->
   <text x="38" y="230" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">// IMPACT SNAPSHOT &amp; AWARDS (cv_tech.pdf synced)</text>
-  <text x="38" y="254" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="10.5">• Govt. of Kerala (NATPAC): Real-Time Civic Telemetry across 13 KPIs</text>
-  <text x="38" y="278" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="10.5">• Govt. of Sikkim (SAJO): 18 Districts · 12 Languages · 360° Virtual Tours</text>
-  <text x="38" y="302" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="10.5">• Winner: Jaipuria &amp; AKTU Business Plan Challenges · IIT Kanpur Runner-Up</text>
-  <text x="38" y="326" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10.5">• Smart India Hackathon 2025: Winner (Climate &amp; Clean Energy, 36h Sprint)</text>
-  <text x="38" y="350" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="10">• B.Tech AKTU Graduating 2027 (CGPA: 8.0/10) · Machine Learning &amp; DSA</text>
+  <text x="38" y="254" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="10.5">• Govt. of Kerala (NATPAC): Civic Telemetry (13 KPIs)</text>
+  <text x="38" y="278" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="10.5">• Govt. of Sikkim (SAJO): 18 Districts · 12 Languages</text>
+  <text x="38" y="302" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="10.5">• Winner: Jaipuria &amp; AKTU B-Plan · IIT Kanpur Runner-Up</text>
+  <text x="38" y="326" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10.5">• SIH 2025: Winner (Climate &amp; Clean Energy, 36h Sprint)</text>
+  <text x="38" y="350" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="10">• B.Tech AKTU Graduating 2027 (CGPA: 8.0/10) · ML &amp; DSA</text>
 
   <!-- Right Side: Dedicated Separated Sparkline Chart Card (Zero Text Overlap) -->
   <rect x="448" y="222" width="136" height="146" rx="8" fill="#141812" stroke="#3C422E" stroke-width="1"/>

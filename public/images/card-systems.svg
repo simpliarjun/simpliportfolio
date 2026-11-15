@@ -14,34 +14,31 @@
   <circle cx="80" cy="35" r="5" fill="#C8E620"/>
   <text x="102" y="39" fill="#F7F3EB" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1.2">ARJUN-SYSTEMS-KERNEL // SIH-2025 // LUMINIA-OS</text>
 
-  <!-- Top Row: 2 Structured Boxes -->
-  <!-- Box 1: SIH 2025 Hackathon Win -->
+  <!-- Top Row: 2 Compact Structured Boxes -->
+  <!-- Box 1: SIH 2025 Winner -->
   <rect x="24" y="62" width="274" height="134" rx="10" fill="#1C211A" stroke="#C8E620" stroke-width="1.5"/>
   <rect x="36" y="74" width="86" height="20" rx="4" fill="#C8E620"/>
   <text x="42" y="88" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">WINNER 🏆</text>
-  <text x="36" y="116" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="18" letter-spacing="0.3">SMART INDIA HACKATHON '25</text>
-  <text x="36" y="136" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="11">Climate &amp; Clean Energy · 36h Sprint</text>
-  <text x="36" y="158" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10">Govt. of India · National Judging Panel</text>
-  <text x="36" y="176" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="10">Govt. of Kerala (NATPAC) · 13 Civic KPIs</text>
+  <text x="36" y="118" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="17" letter-spacing="0.3">SIH 2025 WINNER</text>
+  <text x="36" y="144" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="11.5">Climate &amp; Clean Energy</text>
+  <text x="36" y="168" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10.5">36h Sprint · Govt. of India</text>
 
-  <!-- Box 2: CI/CD & Automated Testing -->
+  <!-- Box 2: 77 Pytest Suite -->
   <rect x="322" y="62" width="274" height="134" rx="10" fill="#1C211A" stroke="#86F074" stroke-width="1.5"/>
   <rect x="334" y="74" width="108" height="20" rx="4" fill="#86F074"/>
   <text x="340" y="88" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">CI/CD PASSING</text>
-  <text x="334" y="116" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="18" letter-spacing="0.3">77 VERIFIED PYTEST TESTS</text>
-  <text x="334" y="136" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">Luminia Sovereign OS · FastAPI + React 19</text>
-  <text x="334" y="158" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10">httpx Test Client · Docker CI/CD Pipeline</text>
-  <text x="334" y="176" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">Argon2 Password Hashing · RBAC Multi-User</text>
+  <text x="334" y="118" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="17" letter-spacing="0.3">77 PYTEST SUITE</text>
+  <text x="334" y="144" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11.5">Luminia OS · FastAPI + React 19</text>
+  <text x="334" y="168" fill="#F7F3EB" opacity="0.85" font-family="'JetBrains Mono', monospace" font-size="10.5">Docker CI/CD · Argon2 RBAC</text>
 
-  <!-- Bottom Code Block: Production Architecture -->
+  <!-- Bottom Code Block: Compact 4-Line Object -->
   <rect x="24" y="208" width="572" height="174" rx="10" fill="#181D15" stroke="#262B22" stroke-width="1.2"/>
-  <text x="40" y="228" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">// production_architecture.ts</text>
-  <text x="40" y="250" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11.5">const stack = new ProductionArchitecture({</text>
-  <text x="60" y="272" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="11">frontend: "React 19 + Vite + Next.js + Tailwind CSS",</text>
-  <text x="60" y="292" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="11">backend: "FastAPI + Node.js + Express + WebSocket APIs",</text>
-  <text x="60" y="312" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="11">database: "PostgreSQL + MongoDB + SQLite (JWT / Argon2)",</text>
-  <text x="60" y="332" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">quality: "77 Pytest Suite · Docker CI/CD · 0 Regressions"</text>
-  <text x="40" y="354" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11.5">});</text>
-  <rect x="418" y="346" width="164" height="22" rx="4" fill="#262B22" stroke="#3C422E" stroke-width="1"/>
-  <text x="428" y="361" fill="#86F074" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">// ZERO REGRESSIONS ✓</text>
+  <text x="40" y="232" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">// production_architecture.ts</text>
+  <text x="40" y="256" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11.5">const stack = new ProductionSystem({</text>
+  <text x="60" y="280" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="11">app: "React 19 + FastAPI + Node.js + WebSockets",</text>
+  <text x="60" y="304" fill="#F7F3EB" opacity="0.95" font-family="'JetBrains Mono', monospace" font-size="11">data: "PostgreSQL + MongoDB + SQLite (JWT/Argon2)",</text>
+  <text x="60" y="328" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">qa: "77 Pytest Suite · Docker CI/CD · 0 Bugs"</text>
+  <text x="40" y="352" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11.5">});</text>
+  <rect x="418" y="344" width="164" height="22" rx="4" fill="#262B22" stroke="#3C422E" stroke-width="1"/>
+  <text x="428" y="359" fill="#86F074" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">// ZERO REGRESSIONS ✓</text>
 </svg>
