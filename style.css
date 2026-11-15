@@ -238,7 +238,7 @@ img {
 
 .hero__word {
   position: relative;
-  z-index: 2;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   pointer-events: none;
@@ -279,7 +279,7 @@ img {
   font-family: var(--disp);
   font-weight: 700;
   font-size: clamp(28px, 4vw, 64px);
-  z-index: 3;
+  z-index: 25;
   animation: breathe 5s ease-in-out infinite;
   box-shadow: 0 8px 32px rgba(20, 24, 18, 0.2);
 }
@@ -294,7 +294,7 @@ img {
   right: var(--pad);
   top: 22%;
   width: clamp(240px, 26vw, 420px);
-  z-index: 1;
+  z-index: 5;
   border: 2px solid var(--ink);
   border-radius: var(--r);
   overflow: hidden;
@@ -302,14 +302,38 @@ img {
   box-shadow: 8px 8px 0 var(--ink);
 }
 
-.hero__photo img {
+.hero__photo-wrap {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: clamp(280px, 32vw, 480px);
+}
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 25%;
+  transform: scale(1.05);
+  filter: blur(2.5px) brightness(1.05) contrast(0.9);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), filter 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
+}
+
+.hero__frosted-glass {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(247, 243, 235, 0.35);
+  border-bottom: 1px solid var(--ink);
 }
 
 .hero__photo figcaption {
+  position: relative;
+  z-index: 20;
   padding: 12px 16px;
   background: #ffffff;
   border-top: 2px solid var(--ink);
@@ -318,6 +342,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink);
+  font-family: var(--mono);
 }
 
 .hero__cta {
@@ -1131,8 +1156,11 @@ img {
     max-width: 440px;
     margin: 40px auto 0;
   }
-  .hero__photo img {
+  .hero__photo-wrap {
     height: 380px;
+  }
+  .hero__photo img {
+    height: 100%;
   }
   .hero__circle {
     display: none;
