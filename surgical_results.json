@@ -1,0 +1,70 @@
+{
+  "CV PDF Link & Sync": {
+    "status": 200,
+    "bytes": 161457,
+    "wired_links": 2,
+    "pass": true
+  },
+  "Top Ticker Continuous Marquee": {
+    "animation_name": "marquee",
+    "transform_active": true,
+    "pass": true
+  },
+  "EXPERIENCE (&) IMPACT Continuous Marquee": {
+    "animation_name": "ba-marquee",
+    "transform_active": true,
+    "pass": true
+  },
+  "2 Dark Showcase Cards Hardening": {
+    "c1_text_synced": true,
+    "c2_text_synced": true,
+    "sparkline_isolated": true,
+    "pass": true
+  },
+  "5-Viewport Zero Overflow": {
+    "viewports": [
+      {
+        "label": "Desktop 1920x1080",
+        "scrollWidth": 1920,
+        "innerWidth": 1920,
+        "pass": true
+      },
+      {
+        "label": "Desktop 1440x900",
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "pass": true
+      },
+      {
+        "label": "Tablet 768x1024",
+        "scrollWidth": 768,
+        "innerWidth": 768,
+        "pass": true
+      },
+      {
+        "label": "Mobile 390x844",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "pass": true
+      },
+      {
+        "label": "Mobile 320x568",
+        "scrollWidth": 320,
+        "innerWidth": 320,
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "Console & Network Clean": {
+    "console_errors": 0,
+    "page_errors": 0,
+    "network_errors": 0,
+    "pass": true
+  },
+  "Screenshots Updated": {
+    "desktop_1440": "c:\\Users\\Arjun Gupta\\Desktop\\CV\\portfolio\\public\\screenshots\\00_full_page.png",
+    "mobile_390": "c:\\Users\\Arjun Gupta\\Desktop\\CV\\portfolio\\public\\screenshots\\04_mobile_390.png",
+    "pass": true
+  }
+}

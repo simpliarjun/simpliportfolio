@@ -55,7 +55,7 @@ img {
   display: block;
 }
 
-/* ═══════════ TICKER ═══════════ */
+/* ═══════════ TICKER MARQUEE ═══════════ */
 .ticker {
   background: var(--lime);
   border-bottom: 2px solid var(--ink);
@@ -67,12 +67,20 @@ img {
   max-width: 100%;
 }
 
+.ticker__wrapper {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 22s linear infinite;
+}
+
 .ticker__track {
   display: flex;
   align-items: center;
   gap: 28px;
-  width: max-content;
-  animation: tick 28s linear infinite;
+  padding-right: 28px;
+  flex-shrink: 0;
+  font-family: var(--mono);
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -86,9 +94,9 @@ img {
   opacity: 0.85;
 }
 
-@keyframes tick {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* ═══════════ STICKY HEADER ═══════════ */
@@ -469,26 +477,45 @@ img {
   white-space: nowrap;
 }
 
-/* ═══════════ EXPERIENCE (&) IMPACT ═══════════ */
+/* ═══════════ EXPERIENCE (&) IMPACT CONTINUOUS MARQUEE ═══════════ */
 .ba {
   background: var(--cream);
   border-top: 2px solid var(--ink);
   border-bottom: 2px solid var(--ink);
-  padding: 100px var(--pad);
+  padding: 80px 0 100px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
-.ba__word {
+.ba__marquee-wrap {
+  width: 100%;
+  overflow: hidden;
   position: relative;
+  padding: 12px 0;
+}
+
+.ba__marquee-track {
   display: flex;
-  justify-content: space-between;
+  width: max-content;
+  will-change: transform;
+  animation: ba-marquee 18s linear infinite;
+}
+
+.ba__marquee-item {
+  display: flex;
   align-items: center;
-  gap: 20px;
+  gap: clamp(16px, 3.5vw, 44px);
+  padding-right: clamp(16px, 3.5vw, 44px);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .ba__line {
   font-family: var(--disp);
   font-weight: 700;
-  font-size: clamp(40px, 12vw, 190px);
+  font-size: clamp(48px, 11vw, 160px);
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -496,33 +523,58 @@ img {
 
 .ba__circle {
   flex: none;
-  width: clamp(80px, 10vw, 150px);
+  width: clamp(56px, 8.5vw, 130px);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: clamp(4px, 0.6vw, 8px) solid var(--ink);
+  border: clamp(3px, 0.5vw, 6px) solid var(--ink);
+  background: var(--lime);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--disp);
   font-weight: 700;
-  font-size: clamp(32px, 4.5vw, 72px);
-  background: var(--ivory);
+  font-size: clamp(28px, 5vw, 72px);
+  line-height: 1;
+  box-shadow: 4px 4px 0 var(--ink);
   animation: breathe 5s ease-in-out infinite;
 }
 
+.ba__sep {
+  font-family: var(--mono);
+  font-size: clamp(32px, 6vw, 90px);
+  color: var(--lime);
+  -webkit-text-stroke: 2px var(--ink);
+  line-height: 1;
+  user-select: none;
+  padding: 0 12px;
+}
+
+@keyframes ba-marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
 .ba__note {
-  margin-top: 20px;
-  font-size: 12px;
+  padding: 0 var(--pad);
+  margin-top: 24px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .ba__photos {
+  padding: 0 var(--pad);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin: 56px 0;
+}
+
+.ba__stats {
+  padding: 0 var(--pad);
 }
 
 .ba__photo {
@@ -1282,20 +1334,21 @@ img {
 /* ═══════════ ACCESSIBILITY: REDUCED MOTION ═══════════ */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-  .ticker__track {
-    animation: none !important;
-  }
-  .hero__circle,
-  .ba__circle {
-    animation: none !important;
   }
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+  }
+  .hero__circle {
+    animation: none !important;
+  }
+  /* Continuous marquees glide smoothly so they are never frozen or cut off */
+  .ticker__wrapper {
+    animation: marquee 35s linear infinite !important;
+  }
+  .ba__marquee-track {
+    animation: ba-marquee 30s linear infinite !important;
   }
 }
 
