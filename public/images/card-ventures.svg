@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <rect width="600" height="380" rx="16" fill="#141812"/>
+  <defs>
+    <pattern id="grid2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#262B22" stroke-width="1" stroke-dasharray="2,2"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#grid2)"/>
+  
+  <!-- Header -->
+  <rect x="30" y="25" width="540" height="30" rx="8" fill="#262B22" stroke="#3C422E" stroke-width="1"/>
+  <circle cx="50" cy="40" r="5" fill="#C8E620"/>
+  <circle cx="68" cy="40" r="5" fill="#F5C927"/>
+  <circle cx="86" cy="40" r="5" fill="#86F074"/>
+  <text x="110" y="44" fill="#F7F3EB" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">GTM &amp; VENTURE MATRIX // FOUNDER // 8 CLIENTS SCALED</text>
+
+  <!-- Left: DiGiDiR SEO & Growth Engine -->
+  <rect x="30" y="70" width="255" height="150" rx="8" fill="#1C211A" stroke="#F5C927" stroke-width="1.5"/>
+  <rect x="42" y="82" width="115" height="20" rx="4" fill="#F5C927"/>
+  <text x="48" y="96" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">+45% IMPRESSIONS</text>
+  <text x="42" y="122" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">DIGIDIR SEO GROWTH</text>
+  <text x="42" y="142" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">8 Clients Scaled to Top-10</text>
+  <text x="42" y="165" fill="#F7F3EB" opacity="0.75" font-family="'JetBrains Mono', monospace" font-size="10">Python &amp; SQL Traffic Analytics</text>
+  <text x="42" y="185" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="10">GA4 · Ahrefs · Screaming Frog</text>
+  <text x="42" y="205" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">Zero Ranking → #1–10 SERP Positions</text>
+
+  <!-- Right: Founder & Creative Lead (MIRA & Trevel) -->
+  <rect x="315" y="70" width="255" height="150" rx="8" fill="#1C211A" stroke="#C8E620" stroke-width="1.5"/>
+  <rect x="327" y="82" width="90" height="20" rx="4" fill="#C8E620"/>
+  <text x="333" y="96" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">FOUNDER ✳ LEAD</text>
+  <text x="327" y="122" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">MIRA COUTURE &amp; CASA</text>
+  <text x="327" y="142" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11">Trevel PR &amp; Brand Systems</text>
+  <text x="327" y="165" fill="#F7F3EB" opacity="0.75" font-family="'JetBrains Mono', monospace" font-size="10">Luxury Artisanal Fashion &amp; Living</text>
+  <text x="327" y="185" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">End-to-End Visual Identity &amp; DTC</text>
+  <text x="327" y="205" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="10">Winner, Business Plan Challenges</text>
+
+  <!-- Bottom Metric Graph -->
+  <rect x="30" y="235" width="540" height="120" rx="8" fill="#181D15" stroke="#262B22" stroke-width="1"/>
+  <!-- Sparkline Trend -->
+  <path d="M 50 320 Q 120 310, 180 290 T 300 270 T 420 250 T 540 240" fill="none" stroke="#C8E620" stroke-width="3"/>
+  <circle cx="540" cy="240" r="5" fill="#C8E620"/>
+  <text x="450" y="235" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11">ORGANIC LIFT ↑</text>
+  <text x="45" y="260" fill="#F7F3EB" opacity="0.8" font-family="'JetBrains Mono', monospace" font-size="11">Organic SERP Growth Curve across 5 Verticals (Pharma, Decor, Health, Tech, Fashion)</text>
+  <text x="45" y="280" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">Sikkim SAJO Platform (18 Districts, 12 Languages) · NATPAC Civic Mobility Systems</text>
+  <text x="45" y="300" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="10">Strategic Public Relations, Media Narratives &amp; Conversion-Focused Distribution</text>
+</svg>

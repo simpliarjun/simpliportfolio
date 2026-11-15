@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <rect width="600" height="380" rx="16" fill="#141812"/>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#262B22" stroke-width="1" stroke-dasharray="2,2"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#grid)"/>
+  
+  <!-- Terminal Header -->
+  <rect x="30" y="25" width="540" height="30" rx="8" fill="#262B22" stroke="#3C422E" stroke-width="1"/>
+  <circle cx="50" cy="40" r="5" fill="#F5C927"/>
+  <circle cx="68" cy="40" r="5" fill="#86F074"/>
+  <circle cx="86" cy="40" r="5" fill="#C8E620"/>
+  <text x="110" y="44" fill="#F7F3EB" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">ARJUN-SYSTEMS-KERNEL // SIH-2025 // LUMINIA-DAEMON</text>
+  
+  <!-- Systems Grid -->
+  <!-- Left Box: SIH 2025 Hackathon Win -->
+  <rect x="30" y="70" width="255" height="135" rx="8" fill="#1C211A" stroke="#C8E620" stroke-width="1.5"/>
+  <rect x="42" y="82" width="75" height="20" rx="4" fill="#C8E620"/>
+  <text x="48" y="96" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">WINNER 🏆</text>
+  <text x="42" y="122" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">SMART INDIA HACKATHON</text>
+  <text x="42" y="142" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="11">Clean Energy &amp; Transit AI</text>
+  <text x="42" y="165" fill="#F7F3EB" opacity="0.75" font-family="'JetBrains Mono', monospace" font-size="10">36h Competitive Sprint · 13 KPIs</text>
+  <text x="42" y="185" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="10">Kerala NATPAC Transit Telemetry</text>
+
+  <!-- Right Box: CI/CD & Automated Testing -->
+  <rect x="315" y="70" width="255" height="135" rx="8" fill="#1C211A" stroke="#86F074" stroke-width="1.5"/>
+  <rect x="327" y="82" width="95" height="20" rx="4" fill="#86F074"/>
+  <text x="333" y="96" fill="#141812" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10">CI/CD PASSING</text>
+  <text x="327" y="122" fill="#F7F3EB" font-family="'Oswald', sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">84 VERIFIED TESTS</text>
+  <text x="327" y="142" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">Pytest · GitHub Actions Matrix</text>
+  <text x="327" y="165" fill="#F7F3EB" opacity="0.75" font-family="'JetBrains Mono', monospace" font-size="10">PyTorch Bi-LSTM · Differential Privacy</text>
+  <text x="327" y="185" fill="#86F074" font-family="'JetBrains Mono', monospace" font-size="10">Argon2 Security · 0 Regressions</text>
+
+  <!-- Bottom Code & Architecture Visualizer -->
+  <rect x="30" y="220" width="540" height="135" rx="8" fill="#181D15" stroke="#262B22" stroke-width="1"/>
+  <text x="45" y="245" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11">const cluster = new ProductionTopology({</text>
+  <text x="65" y="265" fill="#F7F3EB" opacity="0.9" font-family="'JetBrains Mono', monospace" font-size="11">frontend: "React 19 + Vite + Tailwind CSS + SwiftUI (iOS)",</text>
+  <text x="65" y="285" fill="#F7F3EB" opacity="0.9" font-family="'JetBrains Mono', monospace" font-size="11">backend: "FastAPI + Node.js + Python 3.14 + WebSocket Streaming",</text>
+  <text x="65" y="305" fill="#F7F3EB" opacity="0.9" font-family="'JetBrains Mono', monospace" font-size="11">database: "PostgreSQL (psycopg2) + MongoDB + SQLite AES-256",</text>
+  <text x="65" y="325" fill="#C8E620" font-family="'JetBrains Mono', monospace" font-size="11">guarantee: "100% Type-Safe · 0 Regressions · Production Hardened"</text>
+  <text x="45" y="343" fill="#F5C927" font-family="'JetBrains Mono', monospace" font-size="11">});</text>
+</svg>
